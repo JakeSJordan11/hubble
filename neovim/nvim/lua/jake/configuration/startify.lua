@@ -9,7 +9,7 @@ vim.g.startify_fortune_use_unicode = 1
 vim.g.startify_session_dir = "~/AppData/Local/nvim/sessions"
 
 vim.api.nvim_exec(
-'let startify_bookmarks = [{\'n\': \'~/AppData/Local/nvim/init.lua\'}, {\'d\': \'~/Development\'}]',
+'let startify_bookmarks = [{\'n\': \'~/hubble/neovim/nvim/init.lua\'}, {\'d\': \'~/Development\'}, {\'h\': \'~/hubble\'}]',
 true
 )
 
