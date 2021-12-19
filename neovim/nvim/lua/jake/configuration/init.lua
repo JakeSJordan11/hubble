@@ -1,3 +1,4 @@
+require'jake.configuration.barbar'
 require'jake.configuration.cmp'
 require'jake.configuration.comment'
 require'jake.configuration.focus'

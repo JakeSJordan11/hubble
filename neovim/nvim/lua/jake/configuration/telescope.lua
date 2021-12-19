@@ -42,3 +42,12 @@ require('telescope').setup{
   },
 }
 require('telescope').load_extension('fzf')
+
+SetKeymap('n', '<leader>ff', '<cmd>lua require(\'telescope.builtin\').find_files()<cr>')
+SetKeymap('n', '<leader>fe', '<cmd>lua require(\'telescope.builtin\').file_browser()<cr>')
+SetKeymap('n', '<leader>fg', '<cmd>lua require(\'telescope.builtin\').live_grep()<cr>')
+SetKeymap('n', '<leader>fb', '<cmd>lua require(\'telescope.builtin\').buffers()<cr>')
+SetKeymap('n', '<leader>fh', '<cmd>lua require(\'telescope.builtin\').help_tags()<cr>')
+SetKeymap('n', '<leader>fk', '<cmd>Telescope keymaps<cr>')
+SetKeymap('n', '<leader>ft', '<cmd>Telescope<cr>')
+SetKeymap('n', '<leader>fc', '<cmd>Telescope commands<cr>')

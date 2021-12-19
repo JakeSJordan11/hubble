@@ -1,13 +1,3 @@
-vim.g.startify_files_number = 5
-vim.g.startify_padding_left = 3
-vim.g.webdevicons_enable_startify = 1
-vim.g.startify_session_delete_buffers = 1
-vim.g.startify_session_sort = 1
-vim.g.startify_update_oldfiles = 1
-vim.g.startify_change_to_dir = 1
-vim.g.startify_fortune_use_unicode = 1
-vim.g.startify_session_dir = "~/AppData/Local/nvim/sessions"
-
 vim.api.nvim_exec(
 'let startify_bookmarks = [{\'n\': \'~/hubble/neovim/nvim/init.lua\'}, {\'d\': \'~/Development\'}, {\'h\': \'~/hubble\'}]',
 true
@@ -39,3 +29,19 @@ vim.g.startify_custom_header = {
 '    d     ...oood88888888888888888888888b\',',
 '   dood8888888888888888888888888888888888b\''
 }
+
+
+SetgVar('startify_files_number', 5)
+SetgVar('startify_padding_left', 3)
+SetgVar('webdevicons_enable_startify', 1)
+SetgVar('startify_session_delete_buffers', 1)
+SetgVar('startify_session_sort', 1)
+SetgVar('startify_update_oldfiles', 1)
+SetgVar('startify_change_to_dir', 1)
+SetgVar('startify_fortune_use_unicode', 1)
+SetgVar('startify_session_dir', '~/hubble/nvim/sessions')
+
+SetKeymap('n', '<leader>ss', '<cmd>SSave<cr>')
+SetKeymap('n', '<leader>sl', '<cmd>SLoad<cr>')
+SetKeymap('n', '<leader>sd', '<cmd>SDelete<cr>')
+SetKeymap('n', '<leader>sh', '<cmd>Startify<cr>')
