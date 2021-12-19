@@ -93,10 +93,9 @@ return require('packer').startup {
       enable = true,
       threshold = 1 -- the amount in ms that a plugins load time must be over for it to be included in the profile
     },
-
-    display = {
-      open_fn = require('packer.util').float,
-    },
     compile_path = vim.fn.stdpath('config')..'/lua/packer_compiled.lua'
+    --[[ display = {
+      open_fn = require('packer.util').float,
+    }, ]]
   },
 }

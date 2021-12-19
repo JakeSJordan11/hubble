@@ -9,8 +9,8 @@
 local Terminal  = require('toggleterm.terminal').Terminal
 local lazygit = Terminal:new({ cmd = "lazygit", hidden = true })
 
-function _lazygit_toggle()
+function Lazygit_toggle()
   lazygit:toggle()
 end
 
-SetKeymap('n', '<leader>gg', '<cmd>lua _lazygit_toggle()<cr>')
+SetKeymap('n', '<leader>gg', '<cmd>lua Lazygit_toggle()<cr>')
