@@ -1,4 +1,4 @@
-local icons = {
+Icons = {
   abc                 = '  ',
   arrowReturn         = '  ',
   bomb                = '  ',
@@ -120,5 +120,3 @@ local icons = {
   Operator            = '  ',
   TypeParameter       = '  '
 }
-
-return icons

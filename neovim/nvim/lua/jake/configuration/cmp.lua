@@ -1,4 +1,3 @@
-local icons = require 'jake.icons'
 -- luasnip setup
 local luasnip = require 'luasnip'
 
@@ -54,6 +53,6 @@ cmp.setup {
     { name = 'luasnip' },
   },
   icons = {
-    icons
+    Icons
   }
 }
