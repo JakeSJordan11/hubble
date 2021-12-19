@@ -50,6 +50,7 @@ SetKeymap('n', '<leader>gg', '<cmd>lua _lazygit_toggle()<cr>')
 
 --TERMINAL KEYMAPS--
 SetKeymap('n', '<leader>`', '<cmd>ToggleTerm<cr>')
+SetKeymap('n', '<leader>2`', '<cmd>ToggleTerm2<cr>')
 SetKeymap('t', '<esc><esc>', '<c-\\><c-n>')
 
 --TROUBLE--

@@ -1,15 +1,12 @@
 # Neovim config todo
 
 ## High Priority
-  - [ ] finish correcting config referencing kickstart.nvim
   - [ ] go through options.lua and assign the correct scope to all options
   - [ ] fix lazygit not showin up in a pop up window
   - [ ] get a code formatter working (prefer prettier)
-  - [ ] setup nvim cmp properly
   - [ ] get lsp to work properly with more than one typescript server running
   - [ ] get multiple termials working correctly
   - [ ] replace startify with lua plugin
-  - [ ] refactor base options using correct scope from help menu
 
 
 
@@ -53,3 +50,5 @@
   - [x] create a window control mode <leader>w which can q - quit, c - close r -resise ac - close all but current
   - [x] toggle quickfix with leader q toggletrouble
   - [x] make keymap for leader f k - telescope keymaps
+  - [x] finish correcting config referencing kickstart.nvim
+  - [x] setup nvim cmp properly

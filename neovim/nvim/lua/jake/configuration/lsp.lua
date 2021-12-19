@@ -1,6 +1,5 @@
 local lsp_installer = require("nvim-lsp-installer")
 lsp_installer.on_server_ready(function (server)
-
 local on_attach = function(_, bufnr)
   SetBufOption(bufnr, 'omnifunc', 'v:lua.vim.lsp.omnifunc')
   SetBufKeymap(bufnr, 'n', 'gD', '<cmd>Lspsaga lsp_finder<cr>')
