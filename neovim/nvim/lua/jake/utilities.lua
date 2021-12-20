@@ -34,8 +34,8 @@ end
 --[[ vim.api.nvim_command('highlight DiagnosticVirtualTextError guibg=none')
 vim.api.nvim_command('highlight DiagnosticVirtualTextHint guibg=none')
 vim.api.nvim_command('highlight DiagnosticVirtualTextInfo guibg=none')
-vim.api.nvim_command('highlight DiagnosticVirtualTextWarn guibg=none') ]]
---[[ vim.cmd'highlight DiagnosticVirtualTextError guibg=none'
+vim.api.nvim_command('highlight DiagnosticVirtualTextWarn guibg=none')
+vim.cmd'highlight DiagnosticVirtualTextError guibg=none'
 vim.cmd'highlight DiagnosticVirtualTextHint guibg=none'
 vim.cmd'highlight DiagnosticVirtualTextInfo guibg=none'
 vim.cmd'highlight DiagnosticVirtualTextWarn guibg=none' ]]

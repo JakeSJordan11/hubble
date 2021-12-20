@@ -118,5 +118,6 @@ Icons = {
   Struct              = ' ﳤ ',
   Event               = '  ',
   Operator            = '  ',
-  TypeParameter       = '  '
+  TypeParameter       = '  ',
+  EndOfLine           = '↴'
 }
