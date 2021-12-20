@@ -294,6 +294,11 @@ _G.packer_plugins = {
     path = "C:\\Users\\JakeS\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\prettier.nvim",
     url = "https://github.com/MunifTanjim/prettier.nvim"
   },
+  ["refactoring.nvim"] = {
+    loaded = true,
+    path = "C:\\Users\\JakeS\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\refactoring.nvim",
+    url = "https://github.com/ThePrimeagen/refactoring.nvim"
+  },
   ["roshnivim-cs"] = {
     loaded = true,
     path = "C:\\Users\\JakeS\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\roshnivim-cs",

@@ -1,96 +1,65 @@
-local lsp_installer = require("nvim-lsp-installer")
+local nvim_lsp = require('lspconfig')
 
-lsp_installer.on_server_ready(function (server)
-local on_attach = function(_, bufnr)
-  SetBufOption(bufnr, 'omnifunc', 'v:lua.vim.lsp.omnifunc')
-  SetBufKeymap(bufnr, 'n', 'gD', '<cmd>Lspsaga lsp_finder<cr>')
-  SetBufKeymap(bufnr, 'n', 'gd', '<cmd>lua vim.lsp.buf.definition()<cr>')
-  SetBufKeymap(bufnr, 'n', 'K','<cmd>Lspsaga hover_doc<cr>')
-  SetBufKeymap(bufnr, 'n', 'gi', '<cmd>lua vim.lsp.buf.implementation()<cr>')
-  SetBufKeymap(bufnr, 'n', '<C-k>', '<cmd>Lspsaga signature_help<cr>')
-  SetBufKeymap(bufnr, 'n', '<leader>wa', '<cmd>lua vim.lsp.buf.add_workspace_folder()<cr>')
-  SetBufKeymap(bufnr, 'n', '<leader>wr', '<cmd>lua vim.lsp.buf.remove_workspace_folder()<cr>')
-  SetBufKeymap(bufnr, 'n', '<leader>wl', '<cmd>lua print(vim.inspect(vim.lsp.buf.list_workspace_folders()))<cr>')
-  SetBufKeymap(bufnr, 'n', '<leader>D', '<cmd>lua vim.lsp.buf.type_definition()<cr>')
-  SetBufKeymap(bufnr, 'n', '<leader>rn', '<cmd>Lspsaga rename<cr>')
-  SetBufKeymap(bufnr, 'n', 'gr', '<cmd>lua vim.lsp.buf.references()<cr>')
-  SetBufKeymap(bufnr, 'n', '<leader>ca', '<cmd>lua vim.lsp.buf.code_action()<cr>')
-  SetBufKeymap(bufnr, 'n', '<leader>e', '<cmd>Lspsaga show_line_diagnostics<cr>')
-  SetBufKeymap(bufnr, 'n', '[d', '<cmd>lua vim.diagnostic.goto_prev()<cr>')
-  SetBufKeymap(bufnr, 'n', ']d', '<cmd>lua vim.diagnostic.goto_next()<cr>')
-  SetBufKeymap(bufnr, 'n', '<leader>q', '<cmd>lua vim.diagnostic.setloclist()<cr>')
-  SetBufKeymap(bufnr, 'n', '<leader>so', [[<cmd>lua require('telescope.builtin').lsp_document_symbols()<cr>]])
-  SetBufOption(bufnr, 'formatexpr', 'v:lua.vim.lsp.formatexpr()')
-  vim.cmd [[ command! Format execute 'lua vim.lsp.buf.formatting()']]
+-- Use an on_attach function to only map the following keys
+-- after the language server attaches to the current buffer
+local on_attach = function(client, bufnr)
+  local function buf_set_keymap(...) vim.api.nvim_buf_set_keymap(bufnr, ...) end
+  local function buf_set_option(...) vim.api.nvim_buf_set_option(bufnr, ...) end
+
+  -- Enable completion triggered by <c-x><c-o>
+  buf_set_option('omnifunc', 'v:lua.vim.lsp.omnifunc')
+
+  -- Mappings.
+  local opts = { noremap=true, silent=true }
+
+  -- See `:help vim.lsp.*` for documentation on any of the below functions
+  buf_set_keymap('n', 'gD', '<cmd>lua vim.lsp.buf.declaration()<CR>', opts)
+  buf_set_keymap('n', 'gd', '<cmd>lua vim.lsp.buf.definition()<CR>', opts)
+  buf_set_keymap('n', 'K', '<cmd>lua vim.lsp.buf.hover()<CR>', opts)
+  buf_set_keymap('n', 'gi', '<cmd>lua vim.lsp.buf.implementation()<CR>', opts)
+  buf_set_keymap('n', '<C-k>', '<cmd>lua vim.lsp.buf.signature_help()<CR>', opts)
+  buf_set_keymap('n', '<space>wa', '<cmd>lua vim.lsp.buf.add_workspace_folder()<CR>', opts)
+  buf_set_keymap('n', '<space>wr', '<cmd>lua vim.lsp.buf.remove_workspace_folder()<CR>', opts)
+  buf_set_keymap('n', '<space>wl', '<cmd>lua print(vim.inspect(vim.lsp.buf.list_workspace_folders()))<CR>', opts)
+  buf_set_keymap('n', '<space>D', '<cmd>lua vim.lsp.buf.type_definition()<CR>', opts)
+  buf_set_keymap('n', '<space>rn', '<cmd>lua vim.lsp.buf.rename()<CR>', opts)
+  buf_set_keymap('n', '<space>ca', '<cmd>lua vim.lsp.buf.code_action()<CR>', opts)
+  buf_set_keymap('n', 'gr', '<cmd>lua vim.lsp.buf.references()<CR>', opts)
+  buf_set_keymap('n', '<space>e', '<cmd>lua vim.diagnostic.open_float()<CR>', opts)
+  buf_set_keymap('n', '[d', '<cmd>lua vim.diagnostic.goto_prev()<CR>', opts)
+  buf_set_keymap('n', ']d', '<cmd>lua vim.diagnostic.goto_next()<CR>', opts)
+  buf_set_keymap('n', '<space>q', '<cmd>lua vim.diagnostic.setloclist()<CR>', opts)
+  buf_set_keymap('n', '<space>f', '<cmd>lua vim.lsp.buf.formatting()<CR>', opts)
+
 end
-
 
 local capabilities = vim.lsp.protocol.make_client_capabilities()
 capabilities = require('cmp_nvim_lsp').update_capabilities(capabilities)
 
-    local opts = {
-        on_attach = on_attach,
-        capabilities = capabilities,
-    }
+-- Use a loop to conveniently call 'setup' on multiple servers and
+-- map buffer local keybindings when the language server attaches
+local servers = { 'rust_analyzer', 'tsserver' }
+for _, lsp in ipairs(servers) do
+  nvim_lsp[lsp].setup {
+    on_attach = on_attach,
+    capabilities = capabilities,
+    flags = {
+      debounce_text_changes = 150,
+    },
+  }
+end
 
-    --[[ if server.name == "bash" then
-      opts.settings = require('bashls').settings
-    end
-
-    if server.name == "cssls" then
-      opts.settings = require('cssls').settings
-    end
-
-    if server.name == "eslint" then
-        opts.on_attach = function (client, bufnr)
-            -- neovim's LSP client does not currently support dynamic capabilities registration, so we need to set
-            -- the resolved capabilities of the eslint server ourselves!
-            client.resolved_capabilities.document_formatting = true
-            on_attach(client, bufnr)
-        end
-        opts.settings = require('eslint').settings
-    end
-
-    if server.name == "html" then
-      opts.capabilities = require('html').capabilities
-      opts.settings = require('html').settings
-    end
-
-    if server.name == "jsonls" then
-      opts.settings = require('jsonls').settings
-    end ]]
-
-    if server.name == "sumneko_lua" then
-    local runtime_path = vim.split(package.path, ';')
-    table.insert(runtime_path, "lua/?.lua")
-    table.insert(runtime_path, "lua/?/init.lua")
-
-    opts.settings = {
-      Lua = {
-        runtime = {
-          -- Tell the language server which version of Lua you're using (most likely LuaJIT in the case of Neovim)
-          version = 'LuaJIT',
-          -- Setup your lua path
-          path = runtime_path,
-        },
-        diagnostics = {
-          globals = { "vim" },
-        },
-        workspace = {
-        library = {
-          [vim.fn.expand "$VIMRUNTIME/lua"] = true,
-          [vim.fn.expand "$VIMRUNTIME/lua/vim/lsp"] = true,
-        },
-        maxPreload = 100000,
-        preloadFileSize = 10000,
-        },
-        telemetry = {
-          enable = false,
-        },
+require('lspconfig').sumneko_lua.setup {
+  on_attach = on_attach,
+  capabilities = capabilities,
+  settings = {
+    Lua = {
+       diagnostics = {
+        globals = { "vim" },
+       },
+      telemetry = {
+        enable = false,
       },
-    }
-  end
-
-  server:setup(opts)
-  vim.cmd[[ do User LspAttachBuffers ]]
-end)
+    },
+  },
+}
