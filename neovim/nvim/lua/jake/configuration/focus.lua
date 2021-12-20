@@ -1,1 +1,1 @@
-require'focus'.setup{}
+require("focus").setup({})
