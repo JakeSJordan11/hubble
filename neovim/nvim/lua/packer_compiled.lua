@@ -199,6 +199,11 @@ _G.packer_plugins = {
     path = "C:\\Users\\JakeS\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\lspsaga.nvim",
     url = "https://github.com/tami5/lspsaga.nvim"
   },
+  ["lua-dev.nvim"] = {
+    loaded = true,
+    path = "C:\\Users\\JakeS\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\lua-dev.nvim",
+    url = "https://github.com/folke/lua-dev.nvim"
+  },
   ["null-ls.nvim"] = {
     loaded = true,
     path = "C:\\Users\\JakeS\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\null-ls.nvim",

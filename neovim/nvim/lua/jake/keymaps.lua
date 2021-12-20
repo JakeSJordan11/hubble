@@ -14,7 +14,7 @@ SetKeymap('n', '<as-k>', 'yyP')
 --Windows movement--
 SetKeymap('n', '<leader>w', '<c-w>')
 
--- Highlight on yank -- make this use lua not vimscript!!!
+-- Highlight on yank
 vim.cmd [[
   augroup YankHighlight
     autocmd!

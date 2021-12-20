@@ -88,6 +88,8 @@ return require('packer').startup {
     use 'lewis6991/gitsigns.nvim'
 
     use 'ThePrimeagen/refactoring.nvim'
+
+    use "folke/lua-dev.nvim"
   end,
 
   config = {

@@ -1,5 +1,5 @@
---[[
 -- Gruvbox initialization
+--[[
 SetgVar('gruvbox_material_better_performance', 1)
 SetgVar('gruvbox_material_enable_bold', 1)
 SetgVar('gruvbox_material_enable_italic', 1)

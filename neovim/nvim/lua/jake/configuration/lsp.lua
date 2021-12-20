@@ -55,7 +55,7 @@ for _, lsp in ipairs(servers) do
   }
 end
 
-require('lspconfig').sumneko_lua.setup {
+--[[ require('lspconfig').sumneko_lua.setup {
   on_attach = on_attach,
   capabilities = capabilities,
   settings = {
@@ -68,4 +68,25 @@ require('lspconfig').sumneko_lua.setup {
       },
     },
   },
-}
+} ]]
+
+local luadev = require("lua-dev").setup({
+  -- add any options here, or leave empty to use the default settings
+  lspconfig = {
+    on_attach = on_attach,
+    capabilities = capabilities,
+    settings = {
+      Lua = {
+        diagnostics = {
+          globals = { "vim" },
+        },
+        telemetry = {
+          enable = false,
+        },
+      },
+      --   cmd = {"lua-language-server"}
+     },
+  },
+})
+
+nvim_lsp.sumneko_lua.setup(luadev)
