@@ -46,9 +46,24 @@ require("trouble").setup({
 	use_diagnostic_signs = false, -- enabling this will use the signs defined in your lsp client
 })
 
-SetKeymap("n", "<leader>xx", "<cmd>TroubleToggle<cr>")
-SetKeymap("n", "<leader>xw", "<cmd>Trouble workspace_diagnostics<cr>")
-SetKeymap("n", "<leader>xd", "<cmd>Trouble document_diagnostics<cr>")
-SetKeymap("n", "<leader>xl", "<cmd>Trouble loclist<cr>")
-SetKeymap("n", "<leader>xq", "<cmd>Trouble quickfix<cr>")
-SetKeymap("n", "gR", "<cmd>Trouble lsp_references<cr>")
+vim.api.nvim_set_keymap("n", "<leader>xx", "<cmd>TroubleToggle<cr>", { nowait = true, silent = true, noremap = true })
+vim.api.nvim_set_keymap(
+	"n",
+	"<leader>xw",
+	"<cmd>Trouble workspace_diagnostics<cr>",
+	{ nowait = true, silent = true, noremap = true }
+)
+vim.api.nvim_set_keymap(
+	"n",
+	"<leader>xd",
+	"<cmd>Trouble document_diagnostics<cr>",
+	{ nowait = true, silent = true, noremap = true }
+)
+vim.api.nvim_set_keymap("n", "<leader>xl", "<cmd>Trouble loclist<cr>", { nowait = true, silent = true, noremap = true })
+vim.api.nvim_set_keymap(
+	"n",
+	"<leader>xq",
+	"<cmd>Trouble quickfix<cr>",
+	{ nowait = true, silent = true, noremap = true }
+)
+vim.api.nvim_set_keymap("n", "gR", "<cmd>Trouble lsp_references<cr>", { nowait = true, silent = true, noremap = true })

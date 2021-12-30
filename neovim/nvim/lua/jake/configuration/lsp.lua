@@ -49,13 +49,10 @@ capabilities = require("cmp_nvim_lsp").update_capabilities(capabilities)
 -- Use a loop to conveniently call 'setup' on multiple servers and
 -- map buffer local keybindings when the language server attaches
 local servers = {
-	"cssls",
-	-- "denols",
-	"eslint",
-	-- "graphql",
+	"cssls", -- "denols",
+	"eslint", -- "graphql",
 	"rust_analyzer",
-	"stylelint_lsp",
-	-- "tailwindcss",
+	"stylelint_lsp", -- "tailwindcss",
 	"tsserver",
 }
 for _, lsp in ipairs(servers) do
@@ -66,20 +63,13 @@ for _, lsp in ipairs(servers) do
 	})
 end
 
---[[ require('lspconfig').sumneko_lua.setup {
-  on_attach = on_attach,
-  capabilities = capabilities,
-  settings = {
-    Lua = {
-       diagnostics = {
-        globals = { "vim" },
-       },
-      telemetry = {
-        enable = false,
-      },
-    },
-  },
-} ]]
+require("lspconfig").sumneko_lua.setup({
+	-- on_attach = on_attach,
+	-- capabilities = capabilities,
+	settings = {
+		Lua = { diagnostics = { globals = { "vim" } }, telemetry = { enable = false } },
+	},
+})
 
 local luadev = require("lua-dev").setup({
 	-- add any options here, or leave empty to use the default settings

@@ -1,4 +1,4 @@
-SetgVar("bufferline", {
+vim.api.nvim_set_var("bufferline", {
 	animation = true,
 	auto_hide = true,
 	tabpages = true,
@@ -22,8 +22,12 @@ SetgVar("bufferline", {
 	letters = "asdfjkl;ghnmxcvbziowerutyqpASDFJKLGHNMXCVBZIOWERUTYQP",
 	no_name_title = nil,
 })
-
-SetKeymap("n", "<tab>", "<cmd>BufferNext<cr>")
-SetKeymap("n", "<s-tab>", "<cmd>BufferPrevious<cr>")
-SetKeymap("n", "<leader>bc", "<cmd>BufferClose<cr>")
-SetKeymap("n", "<Leader>bac", "<cmd>BufferCloseAllButCurrent<cr>")
+vim.api.nvim_set_keymap("n", "<tab>", "<cmd>BufferNext<cr>", { nowait = true, silent = true, noremap = true })
+vim.api.nvim_set_keymap("n", "<s-tab>", "<cmd>BufferPrevious<cr>", { nowait = true, silent = true, noremap = true })
+vim.api.nvim_set_keymap("n", "<leader>bc", "<cmd>BufferClose<cr>", { nowait = true, silent = true, noremap = true })
+vim.api.nvim_set_keymap(
+	"n",
+	"<Leader>bac",
+	"<cmd>BufferCloseAllButCurrent<cr>",
+	{ nowait = true, silent = true, noremap = true }
+)

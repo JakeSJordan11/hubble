@@ -1,19 +1,19 @@
 -- Gruvbox initialization
---[[
-SetgVar('gruvbox_material_better_performance', 1)
-SetgVar('gruvbox_material_enable_bold', 1)
-SetgVar('gruvbox_material_enable_italic', 1)
-SetgVar('gruvbox_material_sign_column_background', 'light')
-vim.cmd'colorscheme gruvbox-material'
+--[[
+vim.api.nvim_set_var('gruvbox_material_better_performance', 1)
+vim.api.nvim_set_var('gruvbox_material_enable_bold', 1)
+vim.api.nvim_set_var('gruvbox_material_enable_italic', 1)
+vim.api.nvim_set_var('gruvbox_material_sign_column_background', 'light')
+vim.cmd'colorscheme gruvbox-material'
 --]]
 -- tokyonight
--- SetgVar('tokyonight_style', 'storm')
--- SetgVar('tokyonight_style', 'day')
-SetgVar("tokyonight_style", "night")
-SetgVar("tokyonight_italic_comments", true)
-SetgVar("tokyonight_italic_keywords", true)
-SetgVar("tokyonight_italic_functions", true)
-SetgVar("tokyonight_sidebars", { "qf", "vista_kind", "terminal", "packer" })
+-- vim.api.nvim_set_var('tokyonight_style', 'storm')
+-- vim.api.nvim_set_var('tokyonight_style', 'day')
+vim.api.nvim_set_var("tokyonight_italic_comments", true)
+vim.api.nvim_set_var("tokyonight_italic_keywords", true)
+vim.api.nvim_set_var("tokyonight_italic_functions", true)
+vim.api.nvim_set_var("tokyonight_sidebars", { "qf", "vista_kind", "terminal", "packer" })
+vim.api.nvim_set_var("tokyonight_style", "night")
 vim.cmd("colorscheme tokyonight")
 
 -- rvcs

@@ -49,12 +49,48 @@ require("telescope").setup({
 	},
 })
 require("telescope").load_extension("fzf")
+require("telescope").load_extension("file_browser")
 
-SetKeymap("n", "<leader>ff", "<cmd>lua require('telescope.builtin').find_files()<cr>")
-SetKeymap("n", "<leader>fe", "<cmd>lua require('telescope.builtin').file_browser()<cr>")
-SetKeymap("n", "<leader>fg", "<cmd>lua require('telescope.builtin').live_grep()<cr>")
-SetKeymap("n", "<leader>fb", "<cmd>lua require('telescope.builtin').buffers()<cr>")
-SetKeymap("n", "<leader>fh", "<cmd>lua require('telescope.builtin').help_tags()<cr>")
-SetKeymap("n", "<leader>fk", "<cmd>Telescope keymaps<cr>")
-SetKeymap("n", "<leader>ft", "<cmd>Telescope<cr>")
-SetKeymap("n", "<leader>fc", "<cmd>Telescope commands<cr>")
+vim.api.nvim_set_keymap(
+	"n",
+	"<leader>fe",
+	"<cmd>lua require 'telescope'.extensions.file_browser.file_browser()<cr>",
+	{ nowait = true, silent = true, noremap = true }
+)
+vim.api.nvim_set_keymap(
+	"n",
+	"<leader>ff",
+	"<cmd>lua require('telescope.builtin').find_files()<cr>",
+	{ nowait = true, silent = true, noremap = true }
+)
+vim.api.nvim_set_keymap(
+	"n",
+	"<leader>fg",
+	"<cmd>lua require('telescope.builtin').live_grep()<cr>",
+	{ nowait = true, silent = true, noremap = true }
+)
+vim.api.nvim_set_keymap(
+	"n",
+	"<leader>fb",
+	"<cmd>lua require('telescope.builtin').buffers()<cr>",
+	{ nowait = true, silent = true, noremap = true }
+)
+vim.api.nvim_set_keymap(
+	"n",
+	"<leader>fh",
+	"<cmd>lua require('telescope.builtin').help_tags()<cr>",
+	{ nowait = true, silent = true, noremap = true }
+)
+vim.api.nvim_set_keymap(
+	"n",
+	"<leader>fk",
+	"<cmd>Telescope keymaps<cr>",
+	{ nowait = true, silent = true, noremap = true }
+)
+vim.api.nvim_set_keymap("n", "<leader>ft", "<cmd>Telescope<cr>", { nowait = true, silent = true, noremap = true })
+vim.api.nvim_set_keymap(
+	"n",
+	"<leader>fc",
+	"<cmd>Telescope commands<cr>",
+	{ nowait = true, silent = true, noremap = true }
+)

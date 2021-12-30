@@ -21,4 +21,4 @@ require("zen-mode").setup({
 	},
 })
 
-SetKeymap("n", "<leader>z", "<cmd>ZenMode<cr>")
+vim.api.nvim_set_keymap("n", "<leader>z", "<cmd>ZenMode<cr>", { nowait = true, silent = true, noremap = true })

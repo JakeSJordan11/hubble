@@ -2,7 +2,6 @@ if require("jake.first_load")() then
 	return
 end
 require("impatient").enable_profile()
-require("jake.utilities")
 require("jake.neovide")
 require("jake.options")
 require("jake.theme")

@@ -24,6 +24,7 @@ return require("packer").startup({
 
 		use("nvim-telescope/telescope.nvim")
 		use("nvim-telescope/telescope-fzf-native.nvim")
+		use("nvim-telescope/telescope-file-browser.nvim")
 
 		use("neovim/nvim-lspconfig")
 		use("williamboman/nvim-lsp-installer")
