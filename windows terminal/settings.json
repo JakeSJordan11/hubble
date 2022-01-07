@@ -44,7 +44,7 @@
     "focusFollowMouse": false,
     "initialCols": 100,
     "initialRows": 100,
-    "launchMode": "maximizedFocus",
+    "launchMode": "focus",
     "profiles": 
     {
         "defaults": 
