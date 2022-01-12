@@ -8,6 +8,6 @@ end
 vim.api.nvim_set_keymap(
   "n",
   "<leader>gg",
-  "<cmd>lua _G._lazygit_toggle()<cr>",
+  "<cmd> lua _G._lazygit_toggle()<cr>",
   { nowait = true, silent = true, noremap = true }
 )
