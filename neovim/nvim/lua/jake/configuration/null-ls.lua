@@ -39,7 +39,7 @@ local sources = {
 	-- null_ls.builtins.diagnostics.hadolint,
 	-- null_ls.builtins.diagnostics.markdownlint,
 	-- null_ls.builtins.diagnostics.shellcheck,
-	null_ls.builtins.diagnostics.stylelint,
+	-- null_ls.builtins.diagnostics.stylelint,
 	-- null_ls.builtins.diagnostics.vale,
 	-- null_ls.builtins.diagnostics.vint,
 	-- null_ls.builtins.diagnostics.yamllint,

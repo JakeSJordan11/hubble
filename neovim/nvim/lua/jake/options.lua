@@ -48,4 +48,4 @@ vim.opt.updatetime = 50
 vim.opt.wildmenu = true
 vim.opt.writebackup = false
 vim.opt.wrap = false
--- vim.opt.listchars = "space:·,tab:> ,eol:↴,trail:-,nbsp:+"
+-- vim.opt.listchars = "space:·"

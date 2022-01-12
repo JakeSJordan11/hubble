@@ -1,5 +1,5 @@
 if require("jake.first_load")() then
-	return
+  return
 end
 require("impatient").enable_profile()
 require("jake.neovide")
