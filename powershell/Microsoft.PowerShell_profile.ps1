@@ -6,4 +6,4 @@ Import-Module PSReadline
 Set-Alias -Name vi -Value neovide
 Set-Alias -Name vim -Value neovide
 
-Set-PoshPrompt -Theme jblab_2021
+# Set-PoshPrompt -Theme jblab_2021

@@ -10,7 +10,7 @@ require("toggleterm").setup({
     border = "curved",
     height = vim.o.lines - 8,
     width = vim.o.columns - 8,
-    winblend = 3,
+    winblend = 0,
     highlights = {
       border = "Normal",
       background = "Normal",

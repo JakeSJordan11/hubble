@@ -16,7 +16,7 @@ return require("packer").startup({
     -- use("sainnhe/sonokai")
     -- use("sainnhe/edge")
   use("shaeinst/roshnivim-cs")
-   -- use("martinsione/darkplus.nvim")
+   use("martinsione/darkplus.nvim")
   use("savq/melange")
    -- use("rktjmp/lush.nvim")
   use("ellisonleao/gruvbox.nvim")
@@ -92,7 +92,12 @@ return require("packer").startup({
 
    -- use("rcarriga/nvim-notify")
 
-    -- use("goolord/alpha-nvim")
+    --[[ use {
+    'goolord/alpha-nvim',
+      config = function ()
+        require'alpha'.setup(require'alpha.themes.dashboard'.opts)
+      end
+    } ]]
 
     -- use("stevearc/dressing.nvim")
 
