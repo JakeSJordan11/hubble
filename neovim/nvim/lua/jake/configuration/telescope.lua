@@ -23,11 +23,11 @@ require("telescope").setup({
     entry_prefix = " · ", -- symbol on non-selected rows in results window
     initial_mode = "insert", -- start in insert mode
     selection_strategy = "reset", -- what happens to selection when list changeset
-    layout_config = {
-      height = vim.o.lines - 6,
-      width = vim.o.columns - 6,
-      preview_width = 0.5,
-    },
+    -- layout_config = {
+    --   height = vim.o.lines - 6,
+    --   width = vim.o.columns - 6,
+    --   preview_width = 0.5,
+    -- },
     -- prompt_position = "top", -- have prompt at the top (has no effect on vertical configuration)
     -- sorting_strategy = "ascending", -- start with most important search on top
     file_ignore_patterns = { "node_modules/.*" }, -- never search in node_modules/ dir
@@ -43,7 +43,7 @@ require("telescope").setup({
     grep_previewer = require("telescope.previewers").vim_buffer_vimgrep.new,
     qflist_previewer = require("telescope.previewers").vim_buffer_qflist.new,
     buffer_previewer_maker = require("telescope.previewers").buffer_previewer_maker,
-    preview_cutoff = 120,
+    -- preview_cutoff = 120,
     mappings = {
       i = {
         ["<c-j>"] = actions.move_selection_next,

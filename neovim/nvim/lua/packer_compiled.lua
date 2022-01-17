@@ -89,6 +89,16 @@ _G.packer_plugins = {
     path = "C:\\Users\\JakeS\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\cmp-buffer",
     url = "https://github.com/hrsh7th/cmp-buffer"
   },
+  ["cmp-cmdline"] = {
+    loaded = true,
+    path = "C:\\Users\\JakeS\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\cmp-cmdline",
+    url = "https://github.com/hrsh7th/cmp-cmdline"
+  },
+  ["cmp-npm"] = {
+    loaded = true,
+    path = "C:\\Users\\JakeS\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\cmp-npm",
+    url = "https://github.com/David-Kunz/cmp-npm"
+  },
   ["cmp-nvim-lsp"] = {
     loaded = true,
     path = "C:\\Users\\JakeS\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\cmp-nvim-lsp",
@@ -104,20 +114,45 @@ _G.packer_plugins = {
     path = "C:\\Users\\JakeS\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\cmp-path",
     url = "https://github.com/hrsh7th/cmp-path"
   },
+  ["cmp-spell"] = {
+    loaded = true,
+    path = "C:\\Users\\JakeS\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\cmp-spell",
+    url = "https://github.com/f3fora/cmp-spell"
+  },
   cmp_luasnip = {
     loaded = true,
     path = "C:\\Users\\JakeS\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\cmp_luasnip",
     url = "https://github.com/saadparwaiz1/cmp_luasnip"
   },
-  ["darkplus.nvim"] = {
+  ["dressing.nvim"] = {
     loaded = true,
-    path = "C:\\Users\\JakeS\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\darkplus.nvim",
-    url = "https://github.com/martinsione/darkplus.nvim"
+    path = "C:\\Users\\JakeS\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\dressing.nvim",
+    url = "https://github.com/stevearc/dressing.nvim"
+  },
+  ["filetype.nvim"] = {
+    loaded = true,
+    path = "C:\\Users\\JakeS\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\filetype.nvim",
+    url = "https://github.com/nathom/filetype.nvim"
+  },
+  ["fine-cmdline.nvim"] = {
+    loaded = true,
+    path = "C:\\Users\\JakeS\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\fine-cmdline.nvim",
+    url = "https://github.com/VonHeikemen/fine-cmdline.nvim"
+  },
+  ["focus.nvim"] = {
+    loaded = true,
+    path = "C:\\Users\\JakeS\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\focus.nvim",
+    url = "https://github.com/beauwilliams/focus.nvim"
   },
   ["gitsigns.nvim"] = {
     loaded = true,
     path = "C:\\Users\\JakeS\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\gitsigns.nvim",
     url = "https://github.com/lewis6991/gitsigns.nvim"
+  },
+  ["glow.nvim"] = {
+    loaded = true,
+    path = "C:\\Users\\JakeS\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\glow.nvim",
+    url = "https://github.com/ellisonleao/glow.nvim"
   },
   ["gruvbox.nvim"] = {
     loaded = true,
@@ -139,10 +174,15 @@ _G.packer_plugins = {
     path = "C:\\Users\\JakeS\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\lua-dev.nvim",
     url = "https://github.com/folke/lua-dev.nvim"
   },
-  melange = {
+  ["nui.nvim"] = {
     loaded = true,
-    path = "C:\\Users\\JakeS\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\melange",
-    url = "https://github.com/savq/melange"
+    path = "C:\\Users\\JakeS\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\nui.nvim",
+    url = "https://github.com/MunifTanjim/nui.nvim"
+  },
+  ["null-ls.nvim"] = {
+    loaded = true,
+    path = "C:\\Users\\JakeS\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\null-ls.nvim",
+    url = "https://github.com/jose-elias-alvarez/null-ls.nvim"
   },
   ["nvim-autopairs"] = {
     loaded = true,
@@ -154,10 +194,20 @@ _G.packer_plugins = {
     path = "C:\\Users\\JakeS\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\nvim-cmp",
     url = "https://github.com/hrsh7th/nvim-cmp"
   },
+  ["nvim-lsp-ts-utils"] = {
+    loaded = true,
+    path = "C:\\Users\\JakeS\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\nvim-lsp-ts-utils",
+    url = "https://github.com/jose-elias-alvarez/nvim-lsp-ts-utils"
+  },
   ["nvim-lspconfig"] = {
     loaded = true,
     path = "C:\\Users\\JakeS\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\nvim-lspconfig",
     url = "https://github.com/neovim/nvim-lspconfig"
+  },
+  ["nvim-lsputils"] = {
+    loaded = true,
+    path = "C:\\Users\\JakeS\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\nvim-lsputils",
+    url = "https://github.com/RishabhRD/nvim-lsputils"
   },
   ["nvim-tree.lua"] = {
     loaded = true,
@@ -214,15 +264,15 @@ _G.packer_plugins = {
     path = "C:\\Users\\JakeS\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\prettier.nvim",
     url = "https://github.com/MunifTanjim/prettier.nvim"
   },
-  ["roshnivim-cs"] = {
-    loaded = true,
-    path = "C:\\Users\\JakeS\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\roshnivim-cs",
-    url = "https://github.com/shaeinst/roshnivim-cs"
-  },
   ["rust-tools.nvim"] = {
     loaded = true,
     path = "C:\\Users\\JakeS\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\rust-tools.nvim",
     url = "https://github.com/simrat39/rust-tools.nvim"
+  },
+  ["searchbox.nvim"] = {
+    loaded = true,
+    path = "C:\\Users\\JakeS\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\searchbox.nvim",
+    url = "https://github.com/VonHeikemen/searchbox.nvim"
   },
   ["telescope-file-browser.nvim"] = {
     loaded = true,
@@ -249,20 +299,25 @@ _G.packer_plugins = {
     path = "C:\\Users\\JakeS\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\toggleterm.nvim",
     url = "https://github.com/akinsho/toggleterm.nvim"
   },
-  ["tokyonight.nvim"] = {
-    loaded = true,
-    path = "C:\\Users\\JakeS\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\tokyonight.nvim",
-    url = "https://github.com/folke/tokyonight.nvim"
-  },
   ["trouble.nvim"] = {
     loaded = true,
     path = "C:\\Users\\JakeS\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\trouble.nvim",
     url = "https://github.com/folke/trouble.nvim"
   },
+  ["twilight.nvim"] = {
+    loaded = true,
+    path = "C:\\Users\\JakeS\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\twilight.nvim",
+    url = "https://github.com/folke/twilight.nvim"
+  },
   ["windline.nvim"] = {
     loaded = true,
     path = "C:\\Users\\JakeS\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\windline.nvim",
     url = "https://github.com/windwp/windline.nvim"
+  },
+  ["zen-mode.nvim"] = {
+    loaded = true,
+    path = "C:\\Users\\JakeS\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\zen-mode.nvim",
+    url = "https://github.com/folke/zen-mode.nvim"
   }
 }
 

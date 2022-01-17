@@ -38,9 +38,10 @@ local on_attach = function(bufnr)
   buf_set_keymap("n", "[d", "<cmd>lua vim.diagnostic.goto_prev()<cr>", opts)
   buf_set_keymap("n", "]d", "<cmd>lua vim.diagnostic.goto_next()<cr>", opts)
   buf_set_keymap("n", "<space>q", "<cmd>lua vim.diagnostic.setloclist()<cr>", opts)
-  buf_set_keymap("n", "<space>m", "<cmd>lua vim.lsp.buf.formatting()<cr>", opts)
 
   vim.cmd([[ command! Format execute 'lua vim.lsp.buf.formatting()']])
+  buf_set_keymap("n", "<space>l", "<cmd>Format<cr>", opts)
+  buf_set_keymap("n", "<space>k", "<cmd>%s/\r//g<cr>", opts)
 end
 
 local capabilities = vim.lsp.protocol.make_client_capabilities()
@@ -54,8 +55,8 @@ local servers = {
   "eslint",
   -- "graphql",
   "rust_analyzer",
-  -- "stylelint_lsp",
-  -- "tailwindcss",
+  "stylelint_lsp",
+  "tailwindcss",
   "tsserver",
 }
 for _, lsp in ipairs(servers) do
