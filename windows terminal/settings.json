@@ -44,7 +44,7 @@
     "focusFollowMouse": false,
     "initialCols": 100,
     "initialRows": 100,
-    "launchMode": "focus",
+    "launchMode": "default",
     "profiles": 
     {
         "defaults": 
@@ -60,7 +60,6 @@
                 "weight": "normal"
             },
             "intenseTextStyle": "all",
-            "padding": "0",
             "scrollbarState": "hidden"
         },
         "list": 
