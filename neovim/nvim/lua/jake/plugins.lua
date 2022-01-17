@@ -10,14 +10,14 @@ return require("packer").startup({
 
     -- use("RishabhRD/popfix")
 
-    use("folke/tokyonight.nvim")
+    -- use("folke/tokyonight.nvim")
     -- use("sainnhe/gruvbox-material")
     -- use("sainnhe/everforest")
     -- use("sainnhe/sonokai")
     -- use("sainnhe/edge")
-  use("shaeinst/roshnivim-cs")
-   use("martinsione/darkplus.nvim")
-  use("savq/melange")
+  -- use("shaeinst/roshnivim-cs")
+   -- use("martinsione/darkplus.nvim")
+  -- use("savq/melange")
    -- use("rktjmp/lush.nvim")
   use("ellisonleao/gruvbox.nvim")
 
@@ -34,15 +34,15 @@ return require("packer").startup({
 
     use("neovim/nvim-lspconfig")
    -- use("williamboman/nvim-lsp-installer")
-    -- use("jose-elias-alvarez/null-ls.nvim")
-   -- use("jose-elias-alvarez/nvim-lsp-ts-utils")
-   -- use("RishabhRD/nvim-lsputils")
+    use("jose-elias-alvarez/null-ls.nvim")
+   use("jose-elias-alvarez/nvim-lsp-ts-utils")
+   use("RishabhRD/nvim-lsputils")
     -- use("tami5/lspsaga.nvim")
 
     use("hrsh7th/cmp-nvim-lsp")
     use("hrsh7th/cmp-buffer")
     use("hrsh7th/cmp-path")
-   -- use("hrsh7th/cmp-cmdline")
+   use("hrsh7th/cmp-cmdline")
    -- use("hrsh7th/cmp-emoji")
     use("hrsh7th/nvim-cmp")
     --[[ use({
@@ -52,13 +52,13 @@ return require("packer").startup({
      requires = "hrsh7th/nvim-cmp",
     }) ]]
     use("hrsh7th/cmp-nvim-lua")
-   -- use("David-Kunz/cmp-npm")
-   -- use("f3fora/cmp-spell")
+   use("David-Kunz/cmp-npm")
+   use("f3fora/cmp-spell")
     use("saadparwaiz1/cmp_luasnip")
     use("onsails/lspkind-nvim")
     use("L3MON4D3/LuaSnip")
 
-   -- use("beauwilliams/focus.nvim")
+   use("beauwilliams/focus.nvim")
 
     use("MunifTanjim/prettier.nvim")
 
@@ -74,13 +74,13 @@ return require("packer").startup({
 
     use("numToStr/Comment.nvim")
 
-   -- use("folke/zen-mode.nvim")
+   use("folke/zen-mode.nvim")
 
-   -- use("folke/twilight.nvim")
+   use("folke/twilight.nvim")
 
-   -- use("ellisonleao/glow.nvim")
+   use("ellisonleao/glow.nvim")
 
-   -- use("nathom/filetype.nvim")
+   use("nathom/filetype.nvim")
 
     use("lewis6991/impatient.nvim")
 
@@ -99,7 +99,7 @@ return require("packer").startup({
       end
     } ]]
 
-    -- use("stevearc/dressing.nvim")
+    use("stevearc/dressing.nvim")
 
     use("simrat39/rust-tools.nvim")
 
@@ -110,6 +110,9 @@ return require("packer").startup({
     use("folke/lua-dev.nvim")
 
     -- use("github/copilot.vim")
+    use("MunifTanjim/nui.nvim")
+    use("VonHeikemen/fine-cmdline.nvim")
+    use("VonHeikemen/searchbox.nvim")
   end,
 
 
