@@ -51,15 +51,12 @@
         {
             "antialiasingMode": "cleartype",
             "bellStyle": "none",
-            "colorScheme": "Gruvbox Dark",
+            "colorScheme": "TokyoNight",
             "cursorShape": "filledBox",
             "font": 
             {
-                "face": "OperatorMonoSSmLig NF",
-                "size": 14,
-                "weight": "normal"
+                "face": "OperatorMonoSSmLig NF"
             },
-            "intenseTextStyle": "all",
             "scrollbarState": "hidden"
         },
         "list": 

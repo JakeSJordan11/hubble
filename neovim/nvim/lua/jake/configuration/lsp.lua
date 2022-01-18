@@ -25,23 +25,23 @@ local on_attach = function(bufnr)
   buf_set_keymap("n", "gi", "<cmd>lua vim.lsp.buf.implementation()<cr>", opts)
   buf_set_keymap('n', '<C-k>', '<cmd>lua vim.lsp.buf.signature_help()<CR>', opts)
   -- buf_set_keymap("n", "<C-k>", "<cmd>Lspsaga signature_help<cr>", opts)
-  buf_set_keymap("n", "<space>wa", "<cmd>lua vim.lsp.buf.add_workspace_folder()<cr>", opts)
-  buf_set_keymap("n", "<space>wr", "<cmd>lua vim.lsp.buf.remove_workspace_folder()<cr>", opts)
-  buf_set_keymap("n", "<space>wl", "<cmd>lua print(vim.inspect(vim.lsp.buf.list_workspace_folders()))<cr>", opts)
-  buf_set_keymap("n", "<space>D", "<cmd>lua vim.lsp.buf.type_definition()<cr>", opts)
-  buf_set_keymap("n", "<space>rn", "<cmd>lua vim.lsp.buf.rename()<CR>", opts)
-  -- buf_set_keymap('n', '<space>rn', '<cmd>Lspsaga rename<cr>', opts)
-  buf_set_keymap("n", "<space>ca", "<cmd>lua vim.lsp.buf.code_action()<cr>", opts)
+  buf_set_keymap("n", "<leader>wa", "<cmd>lua vim.lsp.buf.add_workspace_folder()<cr>", opts)
+  buf_set_keymap("n", "<leader>wr", "<cmd>lua vim.lsp.buf.remove_workspace_folder()<cr>", opts)
+  buf_set_keymap("n", "<leader>wl", "<cmd>lua print(vim.inspect(vim.lsp.buf.list_workspace_folders()))<cr>", opts)
+  buf_set_keymap("n", "<leader>D", "<cmd>lua vim.lsp.buf.type_definition()<cr>", opts)
+  buf_set_keymap("n", "<leader>rn", "<cmd>lua vim.lsp.buf.rename()<CR>", opts)
+  -- buf_set_keymap('n', '<leader>rn', '<cmd>Lspsaga rename<cr>', opts)
+  buf_set_keymap("n", "<leader>ca", "<cmd>lua vim.lsp.buf.code_action()<cr>", opts)
   buf_set_keymap("n", "gr", "<cmd>lua vim.lsp.buf.references()<cr>", opts)
-  buf_set_keymap('n', '<space>e', '<cmd>lua vim.diagnostic.open_float()<cr>', opts)
-  -- buf_set_keymap("n", "<space>e", "<cmd>Lspsaga show_line_diagnostics<cr>", opts)
+  buf_set_keymap('n', '<leader>e', '<cmd>lua vim.diagnostic.open_float()<cr>', opts)
+  -- buf_set_keymap("n", "<leader>e", "<cmd>Lspsaga show_line_diagnostics<cr>", opts)
   buf_set_keymap("n", "[d", "<cmd>lua vim.diagnostic.goto_prev()<cr>", opts)
   buf_set_keymap("n", "]d", "<cmd>lua vim.diagnostic.goto_next()<cr>", opts)
-  buf_set_keymap("n", "<space>q", "<cmd>lua vim.diagnostic.setloclist()<cr>", opts)
+  buf_set_keymap("n", "<leader>q", "<cmd>lua vim.diagnostic.setloclist()<cr>", opts)
 
   vim.cmd([[ command! Format execute 'lua vim.lsp.buf.formatting()']])
-  buf_set_keymap("n", "<space>l", "<cmd>Format<cr>", opts)
-  buf_set_keymap("n", "<space>k", "<cmd>%s/\r//g<cr>", opts)
+  buf_set_keymap("n", "<leader>l", "<cmd>Format<cr>", opts)
+  buf_set_keymap("n", "<leader>k", "<cmd>%s/\r//g<cr>", opts)
 end
 
 local capabilities = vim.lsp.protocol.make_client_capabilities()
@@ -55,7 +55,7 @@ local servers = {
   "eslint",
   -- "graphql",
   "rust_analyzer",
-  "stylelint_lsp",
+  -- "stylelint_lsp",
   "tailwindcss",
   "tsserver",
 }
@@ -91,3 +91,9 @@ local luadev = require("lua-dev").setup({
 })
 
 nvim_lsp.sumneko_lua.setup(luadev)
+
+-- Change border of documentation hover window, See https://github.com/neovim/neovim/pull/13998.
+vim.lsp.handlers["textDocument/hover"] = vim.lsp.with(vim.lsp.handlers.hover, {
+  border = "rounded",
+})
+

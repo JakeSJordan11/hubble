@@ -67,7 +67,7 @@ local function toggle_anim()
   })
 end
 
-vim.cmd'WindLineFloatToggle'
+-- vim.cmd'WindLineFloatToggle'
 vim.cmd("lua WindLine.airline_anim_toggle = toggle_anim")
 
 -- make it run on startup

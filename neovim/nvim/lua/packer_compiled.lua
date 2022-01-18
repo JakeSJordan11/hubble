@@ -74,10 +74,25 @@ _G.packer_plugins = {
     path = "C:\\Users\\JakeS\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\Comment.nvim",
     url = "https://github.com/numToStr/Comment.nvim"
   },
+  ["DAPInstall.nvim"] = {
+    loaded = true,
+    path = "C:\\Users\\JakeS\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\DAPInstall.nvim",
+    url = "https://github.com/Pocco81/DAPInstall.nvim"
+  },
+  ["FixCursorHold.nvim"] = {
+    loaded = true,
+    path = "C:\\Users\\JakeS\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\FixCursorHold.nvim",
+    url = "https://github.com/antoinemadec/FixCursorHold.nvim"
+  },
   LuaSnip = {
     loaded = true,
     path = "C:\\Users\\JakeS\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\LuaSnip",
     url = "https://github.com/L3MON4D3/LuaSnip"
+  },
+  ["NeoZoom.lua"] = {
+    loaded = true,
+    path = "C:\\Users\\JakeS\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\NeoZoom.lua",
+    url = "https://github.com/nyngwang/NeoZoom.lua"
   },
   ["barbar.nvim"] = {
     loaded = true,
@@ -93,6 +108,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "C:\\Users\\JakeS\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\cmp-cmdline",
     url = "https://github.com/hrsh7th/cmp-cmdline"
+  },
+  ["cmp-emoji"] = {
+    loaded = true,
+    path = "C:\\Users\\JakeS\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\cmp-emoji",
+    url = "https://github.com/hrsh7th/cmp-emoji"
   },
   ["cmp-npm"] = {
     loaded = true,
@@ -119,15 +139,44 @@ _G.packer_plugins = {
     path = "C:\\Users\\JakeS\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\cmp-spell",
     url = "https://github.com/f3fora/cmp-spell"
   },
+  ["cmp-tabnine"] = {
+    after_files = { "C:\\Users\\JakeS\\AppData\\Local\\nvim-data\\site\\pack\\packer\\opt\\cmp-tabnine\\after\\plugin\\cmp-tabnine.lua" },
+    config = { "\27LJ\2\np\0\0\5\0\4\0\b6\0\0\0'\2\1\0B\0\2\2\18\3\0\0009\1\2\0005\4\3\0B\1\3\1K\0\1\0\1\0\3\14max_lines\3è\a\tsort\2\20max_num_results\3\20\nsetup\23cmp_tabnine.config\frequire\0" },
+    load_after = {},
+    loaded = true,
+    needs_bufread = false,
+    path = "C:\\Users\\JakeS\\AppData\\Local\\nvim-data\\site\\pack\\packer\\opt\\cmp-tabnine",
+    url = "https://github.com/tzachar/cmp-tabnine"
+  },
   cmp_luasnip = {
     loaded = true,
     path = "C:\\Users\\JakeS\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\cmp_luasnip",
     url = "https://github.com/saadparwaiz1/cmp_luasnip"
   },
+  colorschemes = {
+    loaded = true,
+    path = "C:\\Users\\JakeS\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\colorschemes",
+    url = "https://github.com/lunarvim/colorschemes"
+  },
+  ["darkplus.nvim"] = {
+    loaded = true,
+    path = "C:\\Users\\JakeS\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\darkplus.nvim",
+    url = "https://github.com/martinsione/darkplus.nvim"
+  },
   ["dressing.nvim"] = {
     loaded = true,
     path = "C:\\Users\\JakeS\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\dressing.nvim",
     url = "https://github.com/stevearc/dressing.nvim"
+  },
+  edge = {
+    loaded = true,
+    path = "C:\\Users\\JakeS\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\edge",
+    url = "https://github.com/sainnhe/edge"
+  },
+  everforest = {
+    loaded = true,
+    path = "C:\\Users\\JakeS\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\everforest",
+    url = "https://github.com/sainnhe/everforest"
   },
   ["filetype.nvim"] = {
     loaded = true,
@@ -144,6 +193,11 @@ _G.packer_plugins = {
     path = "C:\\Users\\JakeS\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\focus.nvim",
     url = "https://github.com/beauwilliams/focus.nvim"
   },
+  ["gitlinker.nvim"] = {
+    loaded = true,
+    path = "C:\\Users\\JakeS\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\gitlinker.nvim",
+    url = "https://github.com/ruifm/gitlinker.nvim"
+  },
   ["gitsigns.nvim"] = {
     loaded = true,
     path = "C:\\Users\\JakeS\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\gitsigns.nvim",
@@ -153,6 +207,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "C:\\Users\\JakeS\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\glow.nvim",
     url = "https://github.com/ellisonleao/glow.nvim"
+  },
+  ["gruvbox-material"] = {
+    loaded = true,
+    path = "C:\\Users\\JakeS\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\gruvbox-material",
+    url = "https://github.com/sainnhe/gruvbox-material"
   },
   ["gruvbox.nvim"] = {
     loaded = true,
@@ -164,6 +223,16 @@ _G.packer_plugins = {
     path = "C:\\Users\\JakeS\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\impatient.nvim",
     url = "https://github.com/lewis6991/impatient.nvim"
   },
+  ["indent-blankline.nvim"] = {
+    loaded = true,
+    path = "C:\\Users\\JakeS\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\indent-blankline.nvim",
+    url = "https://github.com/lukas-reineke/indent-blankline.nvim"
+  },
+  ["kanagawa.nvim"] = {
+    loaded = true,
+    path = "C:\\Users\\JakeS\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\kanagawa.nvim",
+    url = "https://github.com/rebelot/kanagawa.nvim"
+  },
   ["lspkind-nvim"] = {
     loaded = true,
     path = "C:\\Users\\JakeS\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\lspkind-nvim",
@@ -173,6 +242,33 @@ _G.packer_plugins = {
     loaded = true,
     path = "C:\\Users\\JakeS\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\lua-dev.nvim",
     url = "https://github.com/folke/lua-dev.nvim"
+  },
+  ["lush.nvim"] = {
+    loaded = true,
+    path = "C:\\Users\\JakeS\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\lush.nvim",
+    url = "https://github.com/rktjmp/lush.nvim"
+  },
+  ["markdown-preview.nvim"] = {
+    loaded = false,
+    needs_bufread = false,
+    only_cond = false,
+    path = "C:\\Users\\JakeS\\AppData\\Local\\nvim-data\\site\\pack\\packer\\opt\\markdown-preview.nvim",
+    url = "https://github.com/iamcco/markdown-preview.nvim"
+  },
+  melange = {
+    loaded = true,
+    path = "C:\\Users\\JakeS\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\melange",
+    url = "https://github.com/savq/melange"
+  },
+  neovim = {
+    loaded = true,
+    path = "C:\\Users\\JakeS\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\neovim",
+    url = "https://github.com/rose-pine/neovim"
+  },
+  ["neovim-session-manager"] = {
+    loaded = true,
+    path = "C:\\Users\\JakeS\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\neovim-session-manager",
+    url = "https://github.com/Shatur/neovim-session-manager"
   },
   ["nui.nvim"] = {
     loaded = true,
@@ -184,6 +280,11 @@ _G.packer_plugins = {
     path = "C:\\Users\\JakeS\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\null-ls.nvim",
     url = "https://github.com/jose-elias-alvarez/null-ls.nvim"
   },
+  ["numb.nvim"] = {
+    loaded = true,
+    path = "C:\\Users\\JakeS\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\numb.nvim",
+    url = "https://github.com/nacro90/numb.nvim"
+  },
   ["nvim-autopairs"] = {
     loaded = true,
     path = "C:\\Users\\JakeS\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\nvim-autopairs",
@@ -193,6 +294,31 @@ _G.packer_plugins = {
     loaded = true,
     path = "C:\\Users\\JakeS\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\nvim-cmp",
     url = "https://github.com/hrsh7th/nvim-cmp"
+  },
+  ["nvim-colorizer.lua"] = {
+    loaded = true,
+    path = "C:\\Users\\JakeS\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\nvim-colorizer.lua",
+    url = "https://github.com/norcalli/nvim-colorizer.lua"
+  },
+  ["nvim-dap"] = {
+    loaded = true,
+    path = "C:\\Users\\JakeS\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\nvim-dap",
+    url = "https://github.com/mfussenegger/nvim-dap"
+  },
+  ["nvim-dap-ui"] = {
+    loaded = true,
+    path = "C:\\Users\\JakeS\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\nvim-dap-ui",
+    url = "https://github.com/rcarriga/nvim-dap-ui"
+  },
+  ["nvim-dap-virtual-text"] = {
+    loaded = true,
+    path = "C:\\Users\\JakeS\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\nvim-dap-virtual-text",
+    url = "https://github.com/theHamsta/nvim-dap-virtual-text"
+  },
+  ["nvim-lsp-installer"] = {
+    loaded = true,
+    path = "C:\\Users\\JakeS\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\nvim-lsp-installer",
+    url = "https://github.com/williamboman/nvim-lsp-installer"
   },
   ["nvim-lsp-ts-utils"] = {
     loaded = true,
@@ -208,6 +334,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "C:\\Users\\JakeS\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\nvim-lsputils",
     url = "https://github.com/RishabhRD/nvim-lsputils"
+  },
+  ["nvim-notify"] = {
+    loaded = true,
+    path = "C:\\Users\\JakeS\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\nvim-notify",
+    url = "https://github.com/rcarriga/nvim-notify"
   },
   ["nvim-tree.lua"] = {
     loaded = true,
@@ -254,6 +385,11 @@ _G.packer_plugins = {
     path = "C:\\Users\\JakeS\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\plenary.nvim",
     url = "https://github.com/nvim-lua/plenary.nvim"
   },
+  popfix = {
+    loaded = true,
+    path = "C:\\Users\\JakeS\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\popfix",
+    url = "https://github.com/RishabhRD/popfix"
+  },
   ["popup.nvim"] = {
     loaded = true,
     path = "C:\\Users\\JakeS\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\popup.nvim",
@@ -263,6 +399,21 @@ _G.packer_plugins = {
     loaded = true,
     path = "C:\\Users\\JakeS\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\prettier.nvim",
     url = "https://github.com/MunifTanjim/prettier.nvim"
+  },
+  ["project.nvim"] = {
+    loaded = true,
+    path = "C:\\Users\\JakeS\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\project.nvim",
+    url = "https://github.com/ahmedkhalf/project.nvim"
+  },
+  ["refactoring.nvim"] = {
+    loaded = true,
+    path = "C:\\Users\\JakeS\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\refactoring.nvim",
+    url = "https://github.com/ThePrimeagen/refactoring.nvim"
+  },
+  ["roshnivim-cs"] = {
+    loaded = true,
+    path = "C:\\Users\\JakeS\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\roshnivim-cs",
+    url = "https://github.com/shaeinst/roshnivim-cs"
   },
   ["rust-tools.nvim"] = {
     loaded = true,
@@ -274,6 +425,16 @@ _G.packer_plugins = {
     path = "C:\\Users\\JakeS\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\searchbox.nvim",
     url = "https://github.com/VonHeikemen/searchbox.nvim"
   },
+  sonokai = {
+    loaded = true,
+    path = "C:\\Users\\JakeS\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\sonokai",
+    url = "https://github.com/sainnhe/sonokai"
+  },
+  ["surround.nvim"] = {
+    loaded = true,
+    path = "C:\\Users\\JakeS\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\surround.nvim",
+    url = "https://github.com/blackCauldron7/surround.nvim"
+  },
   ["telescope-file-browser.nvim"] = {
     loaded = true,
     path = "C:\\Users\\JakeS\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\telescope-file-browser.nvim",
@@ -283,6 +444,21 @@ _G.packer_plugins = {
     loaded = true,
     path = "C:\\Users\\JakeS\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\telescope-fzf-native.nvim",
     url = "https://github.com/nvim-telescope/telescope-fzf-native.nvim"
+  },
+  ["telescope-media-files.nvim"] = {
+    loaded = true,
+    path = "C:\\Users\\JakeS\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\telescope-media-files.nvim",
+    url = "https://github.com/nvim-telescope/telescope-media-files.nvim"
+  },
+  ["telescope-ui-select.nvim"] = {
+    loaded = true,
+    path = "C:\\Users\\JakeS\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\telescope-ui-select.nvim",
+    url = "https://github.com/nvim-telescope/telescope-ui-select.nvim"
+  },
+  ["telescope-vim-bookmarks.nvim"] = {
+    loaded = true,
+    path = "C:\\Users\\JakeS\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\telescope-vim-bookmarks.nvim",
+    url = "https://github.com/tom-anders/telescope-vim-bookmarks.nvim"
   },
   ["telescope-zoxide"] = {
     loaded = true,
@@ -299,6 +475,11 @@ _G.packer_plugins = {
     path = "C:\\Users\\JakeS\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\toggleterm.nvim",
     url = "https://github.com/akinsho/toggleterm.nvim"
   },
+  ["tokyonight.nvim"] = {
+    loaded = true,
+    path = "C:\\Users\\JakeS\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\tokyonight.nvim",
+    url = "https://github.com/folke/tokyonight.nvim"
+  },
   ["trouble.nvim"] = {
     loaded = true,
     path = "C:\\Users\\JakeS\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\trouble.nvim",
@@ -308,6 +489,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "C:\\Users\\JakeS\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\twilight.nvim",
     url = "https://github.com/folke/twilight.nvim"
+  },
+  ["vim-bookmarks"] = {
+    loaded = true,
+    path = "C:\\Users\\JakeS\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\vim-bookmarks",
+    url = "https://github.com/MattesGroeger/vim-bookmarks"
   },
   ["windline.nvim"] = {
     loaded = true,
@@ -322,6 +508,22 @@ _G.packer_plugins = {
 }
 
 time([[Defining packer_plugins]], false)
+-- Load plugins in order defined by `after`
+time([[Sequenced loading]], true)
+vim.cmd [[ packadd nvim-cmp ]]
+vim.cmd [[ packadd cmp-tabnine ]]
+
+-- Config for: cmp-tabnine
+try_loadstring("\27LJ\2\np\0\0\5\0\4\0\b6\0\0\0'\2\1\0B\0\2\2\18\3\0\0009\1\2\0005\4\3\0B\1\3\1K\0\1\0\1\0\3\14max_lines\3è\a\tsort\2\20max_num_results\3\20\nsetup\23cmp_tabnine.config\frequire\0", "config", "cmp-tabnine")
+
+time([[Sequenced loading]], false)
+vim.cmd [[augroup packer_load_aucmds]]
+vim.cmd [[au!]]
+  -- Filetype lazy-loads
+time([[Defining lazy-load filetype autocommands]], true)
+vim.cmd [[au FileType markdown ++once lua require("packer.load")({'markdown-preview.nvim'}, { ft = "markdown" }, _G.packer_plugins)]]
+time([[Defining lazy-load filetype autocommands]], false)
+vim.cmd("augroup END")
 if should_profile then save_profiles(1) end
 
 end)

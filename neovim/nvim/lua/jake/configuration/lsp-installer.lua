@@ -13,7 +13,8 @@ lsp_installer.on_server_ready(function(server)
       silent = true,
       noremap = true,
     })
-    vim.api.nvim_buf_set_keymap(bufnr, "n", "K", "<cmd>Lspsaga hover_doc<cr>", {
+    -- vim.api.nvim_buf_set_keymap(bufnr, "n", "K", "<cmd>Lspsaga hover_doc<cr>"
+    vim.api.nvim_buf_set_keymap(bufnr, "n", "K", "<cmd>lua vim.lsp.buf.hover()<cr>", {
       nowait = true,
       silent = true,
       noremap = true,
@@ -23,7 +24,8 @@ lsp_installer.on_server_ready(function(server)
       silent = true,
       noremap = true,
     })
-    vim.api.nvim_buf_set_keymap(bufnr, "n", "<C-k>", "<cmd>Lspsaga signature_help<cr>", {
+    -- vim.api.nvim_buf_set_keymap(bufnr, "n", "<C-k>", "<cmd>Lspsaga signature_help<cr>", {
+    vim.api.nvim_buf_set_keymap(bufnr, "n", '<C-k>', '<cmd>lua vim.lsp.buf.signature_help()<cr>', {
       nowait = true,
       silent = true,
       noremap = true,
@@ -54,7 +56,8 @@ lsp_installer.on_server_ready(function(server)
       silent = true,
       noremap = true,
     })
-    vim.api.nvim_buf_set_keymap(bufnr, "n", "<leader>rn", "<cmd>Lspsaga rename<cr>", {
+    vim.api.nvim_buf_set_keymap(bufnr, "n", "<space>rn", "<cmd>lua vim.lsp.buf.rename()<CR>", {
+    -- vim.api.nvim_buf_set_keymap(bufnr, "n", "<leader>rn", "<cmd>Lspsaga rename<cr>", {
       nowait = true,
       silent = true,
       noremap = true,
@@ -69,7 +72,8 @@ lsp_installer.on_server_ready(function(server)
       silent = true,
       noremap = true,
     })
-    vim.api.nvim_buf_set_keymap(bufnr, "n", "<leader>e", "<cmd>Lspsaga show_line_diagnostics<cr>", {
+    vim.api.nvim_buf_set_keymap(bufnr, 'n', '<space>e', '<cmd>lua vim.diagnostic.open_float()<cr>', {
+    -- vim.api.nvim_buf_set_keymap(bufnr, "n", "<leader>e", "<cmd>Lspsaga show_line_diagnostics<cr>", {
       nowait = true,
       silent = true,
       noremap = true,
@@ -123,31 +127,31 @@ lsp_installer.on_server_ready(function(server)
     })
   end
 
-  --[[ if server.name == "bash" then
-      opts.settings = require('bashls').settings
-    end
-
-    if server.name == "cssls" then
-      opts.settings = require('cssls').settings
-    end
-
-    if server.name == "eslint" then
-        opts.on_attach = function (client, bufnr)
-            -- neovim's LSP client does not currently support dynamic capabilities registration, so we need to set
-            -- the resolved capabilities of the eslint server ourselves!
-            client.resolved_capabilities.document_formatting = true
-            on_attach(client, bufnr)
-        end
-        opts.settings = require('eslint').settings
-    end
-
-    if server.name == "html" then
-      opts.capabilities = require('html').capabilities
-      opts.settings = require('html').settings
-    end
-
-    if server.name == "jsonls" then
-      opts.settings = require('jsonls').settings
+  --[[ if server.name == "bash" then
+      opts.settings = require('bashls').settings
+    end
+
+    if server.name == "cssls" then
+      opts.settings = require('cssls').settings
+    end
+
+    if server.name == "eslint" then
+        opts.on_attach = function (client, bufnr)
+            -- neovim's LSP client does not currently support dynamic capabilities registration, so we need to set
+            -- the resolved capabilities of the eslint server ourselves!
+            client.resolved_capabilities.document_formatting = true
+            on_attach(client, bufnr)
+        end
+        opts.settings = require('eslint').settings
+    end
+
+    if server.name == "html" then
+      opts.capabilities = require('html').capabilities
+      opts.settings = require('html').settings
+    end
+
+    if server.name == "jsonls" then
+      opts.settings = require('jsonls').settings
     end ]]
 
   if server.name == "sumneko_lua" then

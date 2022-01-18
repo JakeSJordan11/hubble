@@ -10,23 +10,15 @@ require("telescope").setup({
     }
   },
   defaults = {
-    find_command = {
-      "rg",
-      "--no-heading",
-      "--with-filename",
-      "--line-number",
-      "--column",
-      "--smart-case",
-    },
     prompt_prefix = " ", -- symbol on prompt window
-    selection_caret = " ", -- symbol on selected row in results window
-    entry_prefix = " · ", -- symbol on non-selected rows in results window
+    selection_caret = " ", -- symbol on selected row in results window
+    -- entry_prefix = "·", -- symbol on non-selected rows in results window
     initial_mode = "insert", -- start in insert mode
     selection_strategy = "reset", -- what happens to selection when list changeset
     -- layout_config = {
-    --   height = vim.o.lines - 6,
-    --   width = vim.o.columns - 6,
-    --   preview_width = 0.5,
+      -- height = vim.o.lines - 8,
+      -- width = vim.o.columns - 12,
+      -- preview_width = 0.5,
     -- },
     -- prompt_position = "top", -- have prompt at the top (has no effect on vertical configuration)
     -- sorting_strategy = "ascending", -- start with most important search on top
@@ -106,5 +98,20 @@ vim.api.nvim_set_keymap(
   "n",
   "<leader>fc",
   "<cmd>Telescope commands<cr>",
+  { nowait = true, silent = true, noremap = true }
+)
+
+vim.api.nvim_set_keymap(
+  "n",
+  "<leader>fz",
+  "<cmd>Telescope zoxide list<cr>",
+  { nowait = true, silent = true, noremap = true }
+)
+
+
+vim.api.nvim_set_keymap(
+  "n",
+  "<leader>fp",
+  "<cmd>Telescope projects<cr>",
   { nowait = true, silent = true, noremap = true }
 )

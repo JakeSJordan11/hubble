@@ -3,7 +3,7 @@ vim.api.nvim_set_var("mapleader", " ")
 vim.api.nvim_set_var("maplocalleader", " ")
 vim.opt.backup = false
 vim.opt.clipboard = "unnamedplus"
-vim.opt.cmdheight = 1
+vim.opt.cmdheight = 2
 vim.opt.colorcolumn = "120"
 vim.opt.completeopt = "menuone,noselect"
 vim.opt.concealcursor = "i"
@@ -33,7 +33,7 @@ vim.opt.showmode = false
 vim.opt.showmatch = true
 vim.opt.sidescroll = 5
 vim.opt.sidescrolloff = 10
-vim.opt.signcolumn = "yes"
+vim.opt.signcolumn = "no"
 vim.opt.smartcase = true
 vim.opt.smartindent = true
 vim.opt.smarttab = false
@@ -48,4 +48,5 @@ vim.opt.updatetime = 50
 vim.opt.wildmenu = true
 vim.opt.writebackup = false
 vim.opt.wrap = false
+vim.opt.pumheight = 10
 -- vim.opt.listchars = "space:·"
