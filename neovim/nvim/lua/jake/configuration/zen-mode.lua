@@ -1,4 +1,4 @@
-require("zen-mode").setup({
+require("zen-mode").setup {
   window = {
     backdrop = 0,
     width = 120,
@@ -19,6 +19,6 @@ require("zen-mode").setup({
     twilight = { enabled = true },
     gitsigns = { enabled = false },
   },
-})
+}
 
 vim.api.nvim_set_keymap("n", "<leader>z", "<cmd>ZenMode<cr>", { nowait = true, silent = true, noremap = true })

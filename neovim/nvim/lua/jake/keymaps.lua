@@ -15,9 +15,9 @@ vim.api.nvim_set_keymap("n", "<as-k>", "yyP", { nowait = true, silent = true, no
 vim.api.nvim_set_keymap("n", "<leader>w", "<c-w>", { nowait = true, silent = true, noremap = true })
 
 -- Highlight on yank
-vim.cmd([[
+vim.cmd [[
   augroup YankHighlight
     autocmd!
     autocmd TextYankPost * silent! lua vim.highlight.on_yank()
   augroup end
-]])
+]]

@@ -1,33 +1,33 @@
 vim.api.nvim_exec(
-	"let startify_bookmarks = [{'n': '~/hubble/neovim/nvim/init.lua'}, {'d': '~/Development'}, {'h': '~/hubble'}]",
-	true
+  "let startify_bookmarks = [{'n': '~/hubble/neovim/nvim/init.lua'}, {'d': '~/Development'}, {'h': '~/hubble'}]",
+  true
 )
 
 vim.api.nvim_exec(
-	"let startify_lists = [ { 'type': 'sessions', 'header': ['  Sessions'] }, { 'type': 'bookmarks', 'header': ['  Bookmarks'] }, { 'type': 'files', 'header': ['  Recent Files'] }, { 'type': 'dir', 'header': ['  Recent Files in '. getcwd()] }, { 'type': 'commands',  'header': ['   Commands'] } ]",
-	true
+  "let startify_lists = [ { 'type': 'sessions', 'header': ['  Sessions'] }, { 'type': 'bookmarks', 'header': ['  Bookmarks'] }, { 'type': 'files', 'header': ['  Recent Files'] }, { 'type': 'dir', 'header': ['  Recent Files in '. getcwd()] }, { 'type': 'commands',  'header': ['   Commands'] } ]",
+  true
 )
 
 vim.g.startify_custom_header = {
-	"    ooooooooooooooooooooooooooooooooooooo",
-	"    8                                .d88',",
-	"    8   oooooooooooooooooooooooooooo 8888',",
-	"    8  8888888888888888888888888P\"   8888',",
-	"    8  8888888888888888888888P\"      8888',",
-	"    8  8888888888888888888P\"         8888',",
-	"    8  8888888888888888P\"            8888',",
-	"    8  8888888888888P\"               8888',",
-	"    8  8888888888P\"                  8888',",
-	"    8  8888888P\"                     8888',",
-	"    8  8888P\"                        8888',",
-	"    8 d8888888888888888888888888888888888',",
-	"    8 88888888888888888888888888888888888/",
-	"           8ooooooooooooooocgmm8888\\'",
-	"       ooooooooooooooooooooooooooooooo,",
-	"      d                       ...oood8b',",
-	"     d              ...oood888888888888b',",
-	"    d     ...oood88888888888888888888888b',",
-	"   dood8888888888888888888888888888888888b'",
+  "    ooooooooooooooooooooooooooooooooooooo",
+  "    8                                .d88',",
+  "    8   oooooooooooooooooooooooooooo 8888',",
+  "    8  8888888888888888888888888P\"   8888',",
+  "    8  8888888888888888888888P\"      8888',",
+  "    8  8888888888888888888P\"         8888',",
+  "    8  8888888888888888P\"            8888',",
+  "    8  8888888888888P\"               8888',",
+  "    8  8888888888P\"                  8888',",
+  "    8  8888888P\"                     8888',",
+  "    8  8888P\"                        8888',",
+  "    8 d8888888888888888888888888888888888',",
+  "    8 88888888888888888888888888888888888/",
+  "           8ooooooooooooooocgmm8888\\'",
+  "       ooooooooooooooooooooooooooooooo,",
+  "      d                       ...oood8b',",
+  "     d              ...oood888888888888b',",
+  "    d     ...oood88888888888888888888888b',",
+  "   dood8888888888888888888888888888888888b'",
 }
 
 vim.api.nvim_set_var("startify_files_number", 5)

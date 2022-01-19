@@ -1,4 +1,4 @@
-local lsp_installer = require("nvim-lsp-installer")
+local lsp_installer = require "nvim-lsp-installer"
 
 lsp_installer.on_server_ready(function(server)
   local on_attach = function(_, bufnr)
@@ -25,7 +25,7 @@ lsp_installer.on_server_ready(function(server)
       noremap = true,
     })
     -- vim.api.nvim_buf_set_keymap(bufnr, "n", "<C-k>", "<cmd>Lspsaga signature_help<cr>", {
-    vim.api.nvim_buf_set_keymap(bufnr, "n", '<C-k>', '<cmd>lua vim.lsp.buf.signature_help()<cr>', {
+    vim.api.nvim_buf_set_keymap(bufnr, "n", "<C-k>", "<cmd>lua vim.lsp.buf.signature_help()<cr>", {
       nowait = true,
       silent = true,
       noremap = true,
@@ -57,7 +57,7 @@ lsp_installer.on_server_ready(function(server)
       noremap = true,
     })
     vim.api.nvim_buf_set_keymap(bufnr, "n", "<space>rn", "<cmd>lua vim.lsp.buf.rename()<CR>", {
-    -- vim.api.nvim_buf_set_keymap(bufnr, "n", "<leader>rn", "<cmd>Lspsaga rename<cr>", {
+      -- vim.api.nvim_buf_set_keymap(bufnr, "n", "<leader>rn", "<cmd>Lspsaga rename<cr>", {
       nowait = true,
       silent = true,
       noremap = true,
@@ -72,8 +72,8 @@ lsp_installer.on_server_ready(function(server)
       silent = true,
       noremap = true,
     })
-    vim.api.nvim_buf_set_keymap(bufnr, 'n', '<space>e', '<cmd>lua vim.diagnostic.open_float()<cr>', {
-    -- vim.api.nvim_buf_set_keymap(bufnr, "n", "<leader>e", "<cmd>Lspsaga show_line_diagnostics<cr>", {
+    vim.api.nvim_buf_set_keymap(bufnr, "n", "<space>e", "<cmd>lua vim.diagnostic.open_float()<cr>", {
+      -- vim.api.nvim_buf_set_keymap(bufnr, "n", "<leader>e", "<cmd>Lspsaga show_line_diagnostics<cr>", {
       nowait = true,
       silent = true,
       noremap = true,
@@ -105,7 +105,7 @@ lsp_installer.on_server_ready(function(server)
       }
     )
     vim.api.nvim_buf_set_option(bufnr, "formatexpr", "v:lua.vim.lsp.formatexpr()")
-    vim.cmd([[ command! Format execute 'lua vim.lsp.buf.formatting()']])
+    vim.cmd [[ command! Format execute 'lua vim.lsp.buf.formatting()']]
   end
 
   local capabilities = vim.lsp.protocol.make_client_capabilities()
@@ -114,7 +114,7 @@ lsp_installer.on_server_ready(function(server)
   local opts = { on_attach = on_attach, capabilities = capabilities }
 
   if server.name == "efm" then
-    opts.settings = require("lspconfig").efm.setup({
+    opts.settings = require("lspconfig").efm.setup {
       init_options = { documentFormatting = true },
       settings = {
         rootMarkers = { ".git/" },
@@ -124,7 +124,7 @@ lsp_installer.on_server_ready(function(server)
           },
         },
       },
-    })
+    }
   end
 
   --[[ if server.name == "bash" then
@@ -170,8 +170,8 @@ lsp_installer.on_server_ready(function(server)
         diagnostics = { globals = { "vim" } },
         workspace = {
           library = {
-            [vim.fn.expand("$VIMRUNTIME/lua")] = true,
-            [vim.fn.expand("$VIMRUNTIME/lua/vim/lsp")] = true,
+            [vim.fn.expand "$VIMRUNTIME/lua"] = true,
+            [vim.fn.expand "$VIMRUNTIME/lua/vim/lsp"] = true,
           },
           maxPreload = 100000,
           preloadFileSize = 10000,
@@ -182,5 +182,5 @@ lsp_installer.on_server_ready(function(server)
   end
 
   server:setup(opts)
-  vim.cmd([[ do User LspAttachBuffers ]])
+  vim.cmd [[ do User LspAttachBuffers ]]
 end)

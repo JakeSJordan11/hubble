@@ -1,9 +1,9 @@
-require("wlsample.airline_anim")
-local windline = require("windline")
-local effects = require("wlanimation.effects")
-local HSL = require("wlanimation.utils")
-require("wlsample.airline")
-local animation = require("wlanimation")
+require "wlsample.airline_anim"
+local windline = require "windline"
+local effects = require "wlanimation.effects"
+local HSL = require "wlanimation.utils"
+require "wlsample.airline"
+local animation = require "wlanimation"
 
 local is_run = false
 
@@ -38,7 +38,7 @@ local function toggle_anim()
   end
 
   animation.stop_all()
-  animation.animation({
+  animation.animation {
     data = {
       { "magenta_a", effects.list_color(magenta_anim, 3) },
       { "magenta_b", effects.list_color(magenta_anim, 2) },
@@ -64,11 +64,11 @@ local function toggle_anim()
     timeout = nil,
     delay = 0,
     interval = 60,
-  })
+  }
 end
 
 -- vim.cmd'WindLineFloatToggle'
-vim.cmd("lua WindLine.airline_anim_toggle = toggle_anim")
+vim.cmd "lua WindLine.airline_anim_toggle = toggle_anim"
 
 -- make it run on startup
 vim.defer_fn(function()

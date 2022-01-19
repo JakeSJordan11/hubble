@@ -1,13 +1,13 @@
-local actions = require("telescope.actions")
-require("telescope").setup({
+local actions = require "telescope.actions"
+require("telescope").setup {
   extensions = {
     fzf = {
-      fuzzy = true,                    -- false will only do exact matching
-      override_generic_sorter = true,  -- override the generic sorter
-      override_file_sorter = true,     -- override the file sorter
-      case_mode = "smart_case",        -- or "ignore_case" or "respect_case"
-                                       -- the default case_mode is "smart_case"
-    }
+      fuzzy = true, -- false will only do exact matching
+      override_generic_sorter = true, -- override the generic sorter
+      override_file_sorter = true, -- override the file sorter
+      case_mode = "smart_case", -- or "ignore_case" or "respect_case"
+      -- the default case_mode is "smart_case"
+    },
   },
   defaults = {
     prompt_prefix = " ", -- symbol on prompt window
@@ -16,9 +16,9 @@ require("telescope").setup({
     initial_mode = "insert", -- start in insert mode
     selection_strategy = "reset", -- what happens to selection when list changeset
     -- layout_config = {
-      -- height = vim.o.lines - 8,
-      -- width = vim.o.columns - 12,
-      -- preview_width = 0.5,
+    -- height = vim.o.lines - 8,
+    -- width = vim.o.columns - 12,
+    -- preview_width = 0.5,
     -- },
     -- prompt_position = "top", -- have prompt at the top (has no effect on vertical configuration)
     -- sorting_strategy = "ascending", -- start with most important search on top
@@ -52,10 +52,10 @@ require("telescope").setup({
       },
     },
   },
-})
-require("telescope").load_extension("fzf")
-require("telescope").load_extension("file_browser")
-require'telescope'.load_extension('zoxide')
+}
+require("telescope").load_extension "fzf"
+require("telescope").load_extension "file_browser"
+require("telescope").load_extension "zoxide"
 
 vim.api.nvim_set_keymap(
   "n",
@@ -107,7 +107,6 @@ vim.api.nvim_set_keymap(
   "<cmd>Telescope zoxide list<cr>",
   { nowait = true, silent = true, noremap = true }
 )
-
 
 vim.api.nvim_set_keymap(
   "n",
